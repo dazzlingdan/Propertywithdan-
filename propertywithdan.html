@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Property With Dan | Lagos Real Estate & Investment Consultant</title>
+<meta name="description" content="Daniel Azuma is a Lagos-based real estate consultant helping Nigerians, diaspora investors, and corporate organizations build passive income through verified investment properties, residential homes, commercial assets, and agricultural land.">
+<meta name="keywords" content="Lagos real estate, investment property Lagos, passive income real estate Nigeria, diaspora property investment, farmland investment Nigeria, Daniel Azuma, property consultant Lagos">
+
+<!-- Schema.org JSON-LD for GEO/AI citability -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Daniel Azuma",
+  "alternateName": "Property With Dan",
+  "description": "Lagos-based real estate consultant helping Nigerians, diaspora investors, and corporate organizations build passive income through verified investment properties and agricultural assets.",
+  "url": "https://www.propertywithdan.com",
+  "areaServed": {
+    "@type": "City",
+    "name": "Lagos",
+    "addressCountry": "NG"
+  },
+  "knowsAbout": ["Real Estate Investment", "Passive Income", "Agricultural Land Investment", "Residential Properties", "Commercial Properties", "Diaspora Investment Nigeria"],
+  "sameAs": [
+    "https://medium.com/@azumaakang",
+    "https://www.linkedin.com/in/danielazuma"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --orange: #E8621A;
+    --orange-light: #F47B35;
+    --orange-pale: #FEF0E7;
+    --orange-dark: #C04E0F;
+    --white: #FFFFFF;
+    --cream: #FDFAF7;
+    --text-dark: #1A1208;
+    --text-mid: #4A3728;
+    --text-light: #8A7060;
+    --border: #EDE0D5;
+    --shadow: 0 4px 32px rgba(232, 98, 26, 0.10);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    background: rgba(253,250,247,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    transition: box-shadow 0.3s;
+  }
+  nav.scrolled { box-shadow: 0 2px 24px rgba(232,98,26,0.08); }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-logo span {
+    background: var(--orange);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+  }
+
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a {
+    text-decoration: none; color: var(--text-mid);
+    font-size: 0.9rem; font-weight: 500;
+    transition: color 0.2s;
+    letter-spacing: 0.02em;
+  }
+  .nav-links a:hover { color: var(--orange); }
+
+  .nav-cta {
+    background: var(--orange); color: white;
+    padding: 10px 22px; border-radius: 8px;
+    font-size: 0.88rem; font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .nav-cta:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    padding: 120px 5% 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    background: linear-gradient(135deg, var(--cream) 60%, var(--orange-pale) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(232,98,26,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--orange-pale);
+    border: 1px solid rgba(232,98,26,0.2);
+    color: var(--orange-dark);
+    padding: 6px 14px; border-radius: 100px;
+    font-size: 0.82rem; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero-badge::before {
+    content: '●';
+    color: var(--orange);
+    font-size: 0.5rem;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--orange);
+    position: relative;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+    max-width: 480px;
+    margin-bottom: 40px;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  .hero-btns {
+    display: flex; gap: 16px; flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+
+  .btn-primary {
+    background: var(--orange); color: white;
+    padding: 14px 28px; border-radius: 10px;
+    font-size: 0.95rem; font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,98,26,0.3); }
+
+  .btn-secondary {
+    background: transparent; color: var(--text-dark);
+    padding: 14px 28px; border-radius: 10px;
+    font-size: 0.95rem; font-weight: 600;
+    text-decoration: none; border: 2px solid var(--border);
+    transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
+
+  .hero-stats {
+    display: flex; gap: 32px; margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+
+  .stat-item { text-align: left; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 700;
+    color: var(--orange);
+    line-height: 1;
+  }
+  .stat-label { font-size: 0.82rem; color: var(--text-light); margin-top: 4px; }
+
+  /* Hero visual */
+  .hero-visual {
+    position: relative;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  .hero-card-main {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(232,98,26,0.15);
+    position: relative;
+  }
+
+  .hero-card-img {
+    width: 100%;
+    height: 320px;
+    background: linear-gradient(135deg, #E8621A 0%, #F47B35 50%, #FFAA70 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-card-img::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .hero-card-body { padding: 24px; }
+  .hero-card-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--text-dark); margin-bottom: 6px;
+  }
+  .hero-card-body p { font-size: 0.88rem; color: var(--text-light); }
+
+  .hero-card-tag {
+    display: inline-block;
+    background: var(--orange-pale); color: var(--orange-dark);
+    padding: 4px 10px; border-radius: 100px;
+    font-size: 0.75rem; font-weight: 600;
+    margin-top: 12px;
+  }
+
+  .floating-card {
+    position: absolute;
+    background: white;
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    display: flex; align-items: center; gap: 12px;
+  }
+
+  .floating-card.fc1 { bottom: -20px; left: -30px; }
+  .floating-card.fc2 { top: 30px; right: -30px; }
+
+  .fc-icon {
+    width: 42px; height: 42px;
+    background: var(--orange-pale);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+  .fc-text strong { display: block; font-size: 0.9rem; font-weight: 600; color: var(--text-dark); }
+  .fc-text span { font-size: 0.75rem; color: var(--text-light); }
+
+  /* ── SECTIONS ── */
+  section { padding: 96px 5%; }
+
+  .section-label {
+    font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--orange); margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 800; line-height: 1.2;
+    color: var(--text-dark); margin-bottom: 20px;
+  }
+
+  .section-sub {
+    font-size: 1rem; color: var(--text-mid);
+    line-height: 1.7; max-width: 560px;
+  }
+
+  /* ── ABOUT ── */
+  .about {
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-img-box {
+    width: 100%;
+    aspect-ratio: 4/5;
+    background: linear-gradient(160deg, var(--orange-pale) 0%, #fde8d4 100%);
+    border-radius: 24px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 7rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-img-box::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 40%;
+    background: linear-gradient(to top, rgba(232,98,26,0.12), transparent);
+  }
+
+  .about-badge-box {
+    position: absolute;
+    bottom: 24px; right: -24px;
+    background: var(--orange);
+    color: white; border-radius: 16px;
+    padding: 20px 24px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(232,98,26,0.35);
+  }
+  .about-badge-box strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 900;
+  }
+  .about-badge-box span { font-size: 0.78rem; opacity: 0.9; }
+
+  .about-content .section-sub { margin-bottom: 32px; }
+
+  .about-values {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 16px; margin-top: 32px;
+  }
+
+  .value-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 16px; border-radius: 12px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .value-item:hover { border-color: var(--orange); transform: translateY(-2px); }
+
+  .value-icon {
+    font-size: 1.4rem; flex-shrink: 0;
+    width: 40px; height: 40px;
+    background: var(--orange-pale);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .value-text strong { display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-dark); }
+  .value-text span { font-size: 0.78rem; color: var(--text-light); line-height: 1.5; }
+
+  /* ── SERVICES ── */
+  .services { background: var(--cream); }
+
+  .services-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 56px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .service-card {
+    background: white;
+    border-radius: 20px;
+    padding: 36px 32px;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--orange);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: left;
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
+
+  .service-icon {
+    font-size: 2.4rem; margin-bottom: 20px;
+    width: 64px; height: 64px;
+    background: var(--orange-pale);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; font-weight: 700;
+    color: var(--text-dark); margin-bottom: 12px;
+  }
+
+  .service-card p {
+    font-size: 0.9rem; color: var(--text-mid);
+    line-height: 1.7; margin-bottom: 20px;
+  }
+
+  .service-features { list-style: none; }
+  .service-features li {
+    font-size: 0.84rem; color: var(--text-mid);
+    padding: 6px 0;
+    display: flex; align-items: center; gap: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .service-features li:last-child { border-bottom: none; }
+  .service-features li::before {
+    content: '✓';
+    color: var(--orange); font-weight: 700; flex-shrink: 0;
+  }
+
+  /* ── LISTINGS ── */
+  .listings { background: white; }
+
+  .listings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 48px;
+  }
+
+  .listing-card {
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+    background: white;
+  }
+  .listing-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(232,98,26,0.12); }
+
+  .listing-img {
+    height: 200px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3.5rem;
+    position: relative;
+  }
+
+  .listing-img.residential { background: linear-gradient(135deg, #fde8d4, #f9c9a0); }
+  .listing-img.commercial { background: linear-gradient(135deg, #e8f4fd, #b3d9f5); }
+  .listing-img.farmland { background: linear-gradient(135deg, #e8f5e9, #a5d6a7); }
+
+  .listing-tag {
+    position: absolute; top: 14px; left: 14px;
+    background: white; color: var(--orange-dark);
+    padding: 4px 10px; border-radius: 100px;
+    font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+
+  .listing-body { padding: 22px; }
+  .listing-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 700;
+    color: var(--text-dark); margin-bottom: 6px;
+  }
+  .listing-body .location {
+    font-size: 0.82rem; color: var(--text-light);
+    display: flex; align-items: center; gap: 4px;
+    margin-bottom: 14px;
+  }
+  .listing-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem; font-weight: 700;
+    color: var(--orange);
+  }
+  .listing-price span { font-size: 0.78rem; color: var(--text-light); font-family: 'DM Sans', sans-serif; font-weight: 400; }
+
+  .listing-meta {
+    display: flex; gap: 16px;
+    margin-top: 14px; padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .listing-meta span {
+    font-size: 0.78rem; color: var(--text-light);
+    display: flex; align-items: center; gap: 4px;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials { background: var(--orange); }
+
+  .testimonials .section-label { color: rgba(255,255,255,0.6); }
+  .testimonials .section-title { color: white; }
+
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .testi-card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 18px;
+    padding: 32px;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s;
+  }
+  .testi-card:hover { background: rgba(255,255,255,0.18); transform: translateY(-4px); }
+
+  .testi-quote {
+    font-size: 2.5rem; color: rgba(255,255,255,0.3);
+    font-family: 'Playfair Display', serif;
+    line-height: 1; margin-bottom: 16px;
+  }
+
+  .testi-text {
+    font-size: 0.95rem; color: rgba(255,255,255,0.9);
+    line-height: 1.75; margin-bottom: 24px;
+    font-style: italic;
+  }
+
+  .testi-author { display: flex; align-items: center; gap: 14px; }
+
+  .testi-avatar {
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; flex-shrink: 0;
+  }
+
+  .testi-author strong { display: block; color: white; font-size: 0.9rem; }
+  .testi-author span { color: rgba(255,255,255,0.6); font-size: 0.78rem; }
+
+  .stars { color: #FFD700; font-size: 0.8rem; margin-bottom: 4px; }
+
+  /* ── BLOG ── */
+  .blog { background: var(--cream); }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 48px;
+  }
+
+  .blog-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+  .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+
+  .blog-img {
+    height: 180px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem;
+  }
+  .blog-img.b1 { background: linear-gradient(135deg, #fde8d4, #fcd2b0); }
+  .blog-img.b2 { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+  .blog-img.b3 { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
+
+  .blog-body { padding: 24px; }
+  .blog-cat {
+    font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--orange); margin-bottom: 10px;
+  }
+  .blog-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; font-weight: 700;
+    color: var(--text-dark); margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .blog-body p { font-size: 0.85rem; color: var(--text-mid); line-height: 1.65; margin-bottom: 16px; }
+  .blog-meta { font-size: 0.78rem; color: var(--text-light); display: flex; gap: 16px; }
+
+  .read-more {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--orange); font-size: 0.84rem; font-weight: 600;
+    text-decoration: none; margin-top: 4px;
+    transition: gap 0.2s;
+  }
+  .read-more:hover { gap: 10px; }
+
+  /* ── CONTACT ── */
+  .contact {
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-info .section-sub { margin-bottom: 40px; }
+
+  .contact-methods { display: flex; flex-direction: column; gap: 20px; }
+
+  .contact-method {
+    display: flex; gap: 16px; align-items: center;
+    padding: 18px 20px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+    text-decoration: none;
+    color: inherit;
+  }
+  .contact-method:hover { border-color: var(--orange); background: var(--orange-pale); }
+
+  .cm-icon {
+    width: 48px; height: 48px;
+    background: var(--orange-pale);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; flex-shrink: 0;
+  }
+  .cm-text strong { display: block; font-size: 0.88rem; font-weight: 600; color: var(--text-dark); }
+  .cm-text span { font-size: 0.8rem; color: var(--text-light); }
+
+  /* Contact Form */
+  .contact-form { display: flex; flex-direction: column; gap: 18px; }
+
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group label { font-size: 0.84rem; font-weight: 600; color: var(--text-mid); }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 13px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    background: var(--cream);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    width: 100%;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(232,98,26,0.08);
+    background: white;
+  }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .submit-btn {
+    background: var(--orange); color: white;
+    padding: 14px 28px; border-radius: 10px;
+    font-size: 0.95rem; font-weight: 600;
+    border: none; cursor: pointer;
+    transition: all 0.2s;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .submit-btn:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,98,26,0.3); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--text-dark);
+    color: rgba(255,255,255,0.7);
+    padding: 60px 5% 32px;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand .nav-logo { color: white; margin-bottom: 16px; display: inline-flex; }
+  .footer-brand p { font-size: 0.88rem; line-height: 1.7; max-width: 280px; }
+
+  .footer-col h4 {
+    color: white; font-size: 0.88rem; font-weight: 700;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a {
+    color: rgba(255,255,255,0.6); text-decoration: none;
+    font-size: 0.88rem; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--orange-light); }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 28px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-bottom p { font-size: 0.82rem; }
+
+  .social-links { display: flex; gap: 12px; }
+  .social-link {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.08);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none; font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+  .social-link:hover { background: var(--orange); color: white; }
+
+  /* ── WHATSAPP BUTTON ── */
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 28px; right: 28px;
+    width: 58px; height: 58px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    z-index: 999;
+    text-decoration: none;
+    transition: all 0.3s;
+    animation: bounce 2s 2s infinite;
+  }
+  .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
+  .whatsapp-btn svg { width: 30px; height: 30px; fill: white; }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .whatsapp-tooltip {
+    position: fixed;
+    bottom: 96px; right: 28px;
+    background: white;
+    color: var(--text-dark);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.82rem; font-weight: 600;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    white-space: nowrap;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.2s;
+    z-index: 998;
+  }
+  .whatsapp-btn:hover + .whatsapp-tooltip { opacity: 1; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .hero { grid-template-columns: 1fr; padding-top: 100px; }
+    .hero-visual { display: none; }
+    .about { grid-template-columns: 1fr; }
+    .about-visual { display: none; }
+    .contact { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .services-grid, .listings-grid, .testi-grid, .blog-grid { grid-template-columns: 1fr; }
+    .services-header { flex-direction: column; gap: 20px; }
+    .hero-stats { flex-direction: column; gap: 20px; }
+    .about-values { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo"><span>D</span> Property With Dan</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#listings">Listings</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#blog">Insights</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book a Consultation →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge">Lagos Real Estate Consultant</div>
+    <h1>Build <em>Passive Income</em> Through Smart Property Investments</h1>
+    <p>Daniel Azuma helps Nigerians, diaspora investors, and corporate organizations grow lasting wealth through verified residential, commercial, and agricultural real estate assets in Lagos and beyond.</p>
+    <div class="hero-btns">
+      <a href="#listings" class="btn-primary">View Properties →</a>
+      <a href="#about" class="btn-secondary">Meet Dan 👋</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">200+</div>
+        <div class="stat-label">Happy Investors</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">₦5B+</div>
+        <div class="stat-label">Property Value Managed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">8+</div>
+        <div class="stat-label">Years in Lagos Market</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-card-main">
+      <div class="hero-card-img">🏙️</div>
+      <div class="hero-card-body">
+        <h3>Premium Lagos Properties</h3>
+        <p>Lekki · Victoria Island · Ibeju-Lekki · Epe</p>
+        <span class="hero-card-tag">✦ Verified & Titled</span>
+      </div>
+    </div>
+    <div class="floating-card fc1">
+      <div class="fc-icon">📈</div>
+      <div class="fc-text">
+        <strong>ROI up to 35%</strong>
+        <span>Annual returns on select properties</span>
+      </div>
+    </div>
+    <div class="floating-card fc2">
+      <div class="fc-icon">🌾</div>
+      <div class="fc-text">
+        <strong>Farmland Assets</strong>
+        <span>Agricultural investments available</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-visual">
+    <div class="about-img-box">🤝</div>
+    <div class="about-badge-box">
+      <strong>8+</strong>
+      <span>Years of Trust<br>in Lagos Real Estate</span>
+    </div>
+  </div>
+  <div class="about-content fade-in">
+    <div class="section-label">About Daniel Azuma</div>
+    <h2 class="section-title">Your Trusted Partner for Property Investment in Lagos</h2>
+    <p class="section-sub">I'm Daniel Azuma — a Lagos-based real estate consultant and business management specialist. My mission is simple: help you turn your income into income-generating assets. Whether you're a professional in Lagos, a Nigerian in the diaspora, or a corporate organization, I guide you every step of the way — from property discovery to closing — with full transparency and zero guesswork.</p>
+    <p class="section-sub" style="margin-top:16px;">I specialize in verified investment properties and agricultural assets that build real, lasting passive income — not just transactions.</p>
+    <div class="about-values">
+      <div class="value-item">
+        <div class="value-icon">🔐</div>
+        <div class="value-text">
+          <strong>100% Verified</strong>
+          <span>All properties come with clean titles and legal documentation</span>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">🌍</div>
+        <div class="value-text">
+          <strong>Diaspora Friendly</strong>
+          <span>Remote investment support for Nigerians abroad</span>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">💬</div>
+        <div class="value-text">
+          <strong>Always Available</strong>
+          <span>WhatsApp-first communication for quick responses</span>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">📊</div>
+        <div class="value-text">
+          <strong>ROI Focused</strong>
+          <span>Every recommendation is built around your returns</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header fade-in">
+    <div>
+      <div class="section-label">What I Offer</div>
+      <h2 class="section-title">Services Built Around<br>Your Wealth Goals</h2>
+    </div>
+    <a href="#contact" class="btn-primary">Get Started →</a>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-in">
+      <div class="service-icon">🏘️</div>
+      <h3>Residential Properties</h3>
+      <p>Find your dream home or a high-yield residential investment in Lagos' most sought-after neighbourhoods.</p>
+      <ul class="service-features">
+        <li>Lekki, Ajah & Ibeju-Lekki</li>
+        <li>Off-plan & ready properties</li>
+        <li>Verified C of O & titles</li>
+        <li>Mortgage & installment options</li>
+      </ul>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">🏢</div>
+      <h3>Commercial Properties</h3>
+      <p>Invest in income-generating commercial real estate — offices, retail spaces, warehouses and more.</p>
+      <ul class="service-features">
+        <li>Office & retail spaces</li>
+        <li>Warehousing & logistics hubs</li>
+        <li>Short-let & Airbnb assets</li>
+        <li>Corporate portfolio management</li>
+      </ul>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">🌾</div>
+      <h3>Agricultural Land Assets</h3>
+      <p>Diversify with farmland and agro-based investments delivering strong passive income and capital appreciation.</p>
+      <ul class="service-features">
+        <li>Verified farmland titles</li>
+        <li>Managed farm options available</li>
+        <li>Ibeju-Lekki & Epe corridors</li>
+        <li>Ideal for diaspora investors</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- LISTINGS -->
+<section class="listings" id="listings">
+  <div class="fade-in" style="text-align:center; max-width: 600px; margin: 0 auto 16px;">
+    <div class="section-label">Featured Properties</div>
+    <h2 class="section-title">Current Investment Opportunities</h2>
+    <p class="section-sub" style="margin: 0 auto;">Handpicked, verified properties with strong passive income potential across Lagos.</p>
+  </div>
+  <div class="listings-grid">
+    <div class="listing-card fade-in">
+      <div class="listing-img residential">
+        🏠
+        <span class="listing-tag">Residential</span>
+      </div>
+      <div class="listing-body">
+        <h3>3-Bedroom Smart Apartment</h3>
+        <div class="location">📍 Lekki Phase 1, Lagos</div>
+        <div class="listing-price">₦85,000,000 <span>/ outright</span></div>
+        <div class="listing-meta">
+          <span>🛏 3 Beds</span>
+          <span>🚿 3 Baths</span>
+          <span>📐 180sqm</span>
+        </div>
+      </div>
+    </div>
+    <div class="listing-card fade-in">
+      <div class="listing-img commercial">
+        🏢
+        <span class="listing-tag">Commercial</span>
+      </div>
+      <div class="listing-body">
+        <h3>Short-Let Investment Unit</h3>
+        <div class="location">📍 Victoria Island, Lagos</div>
+        <div class="listing-price">₦120,000,000 <span>/ outright</span></div>
+        <div class="listing-meta">
+          <span>📈 ~30% ROI</span>
+          <span>🏢 68sqm</span>
+          <span>✅ Titled</span>
+        </div>
+      </div>
+    </div>
+    <div class="listing-card fade-in">
+      <div class="listing-img farmland">
+        🌾
+        <span class="listing-tag">Farmland</span>
+      </div>
+      <div class="listing-body">
+        <h3>Managed Farmland Plot</h3>
+        <div class="location">📍 Epe, Lagos State</div>
+        <div class="listing-price">₦4,500,000 <span>/ plot</span></div>
+        <div class="listing-meta">
+          <span>🌱 Managed</span>
+          <span>📜 C of O</span>
+          <span>💰 Passive Income</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:48px;">
+    <a href="#contact" class="btn-primary">Inquire About Any Property →</a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div style="text-align:center;" class="fade-in">
+    <div class="section-label">Client Stories</div>
+    <h2 class="section-title" style="color:white;">What Investors Say About Dan</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card fade-in">
+      <div class="testi-quote">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">Dan made my first Lagos property investment completely stress-free. As someone in the diaspora, I was nervous — but he handled everything from documentation to handover. My property is already generating rent income.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👨🏾</div>
+        <div>
+          <strong>Chukwuemeka O.</strong>
+          <span>Diaspora Investor · UK</span>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card fade-in">
+      <div class="testi-quote">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">I came to Dan wanting to diversify beyond stocks. He introduced me to farmland investment in Epe and I've never looked back. Clean title, managed farming, and quarterly returns. Highly recommend.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👩🏾</div>
+        <div>
+          <strong>Adaeze N.</strong>
+          <span>Corporate Professional · Lagos</span>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card fade-in">
+      <div class="testi-quote">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">What I appreciate most about Dan is his transparency. No hidden fees, no pressure. He took time to understand my goals and found me a short-let property that now earns more than my salary.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👨🏿</div>
+        <div>
+          <strong>Tobi A.</strong>
+          <span>Business Owner · Lagos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog" id="blog">
+  <div class="fade-in" style="text-align:center; max-width:600px; margin:0 auto 16px;">
+    <div class="section-label">Investment Insights</div>
+    <h2 class="section-title">Real Estate Knowledge<br>from Dan's Desk</h2>
+    <p class="section-sub" style="margin:0 auto;">Practical insights on building wealth through property in Lagos and Nigeria.</p>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-card fade-in">
+      <div class="blog-img b1">💡</div>
+      <div class="blog-body">
+        <div class="blog-cat">Investment Strategy</div>
+        <h3>Why Investment Property in Lagos Still Pays Off in 2025</h3>
+        <p>Despite economic shifts, Lagos real estate continues to deliver strong returns for smart investors who know where to look.</p>
+        <div class="blog-meta"><span>📅 Oct 2025</span><span>⏱ 5 min read</span></div>
+        <a href="https://medium.com/@azumaakang" target="_blank" class="read-more">Read on Medium →</a>
+      </div>
+    </div>
+    <div class="blog-card fade-in">
+      <div class="blog-img b2">🌾</div>
+      <div class="blog-body">
+        <div class="blog-cat">Agricultural Assets</div>
+        <h3>Farmland as Passive Income: The Quiet Wealth Strategy Nigerians Are Missing</h3>
+        <p>Agricultural land investment in Epe and Ibeju-Lekki is generating returns that most Lagos investors overlook entirely.</p>
+        <div class="blog-meta"><span>📅 Sep 2025</span><span>⏱ 4 min read</span></div>
+        <a href="https://medium.com/@azumaakang" target="_blank" class="read-more">Read on Medium →</a>
+      </div>
+    </div>
+    <div class="blog-card fade-in">
+      <div class="blog-img b3">✈️</div>
+      <div class="blog-body">
+        <div class="blog-cat">Diaspora Guide</div>
+        <h3>How to Buy Property in Lagos from Abroad Without Getting Scammed</h3>
+        <p>A practical step-by-step guide for Nigerians in the diaspora looking to invest back home safely and confidently.</p>
+        <div class="blog-meta"><span>📅 Aug 2025</span><span>⏱ 6 min read</span></div>
+        <a href="https://medium.com/@azumaakang" target="_blank" class="read-more">Read on Medium →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-info fade-in">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Let's Talk About Your Investment Goals</h2>
+    <p class="section-sub">Whether you're a first-time buyer, a diaspora investor, or a corporate organization — I'm here to guide you. Book a free consultation and let's build your property portfolio together.</p>
+    <div class="contact-methods">
+      <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="contact-method">
+        <div class="cm-icon">💬</div>
+        <div class="cm-text">
+          <strong>WhatsApp (Fastest Response)</strong>
+          <span>Chat with Dan directly — available 7 days a week</span>
+        </div>
+      </a>
+      <a href="mailto:daniel@propertywithdan.com" class="contact-method">
+        <div class="cm-icon">📧</div>
+        <div class="cm-text">
+          <strong>daniel@propertywithdan.com</strong>
+          <span>For formal inquiries and documentation</span>
+        </div>
+      </a>
+      <a href="https://medium.com/@azumaakang" target="_blank" class="contact-method">
+        <div class="cm-icon">✍️</div>
+        <div class="cm-text">
+          <strong>Read Dan's Insights on Medium</strong>
+          <span>Free investment guides and market analysis</span>
+        </div>
+      </a>
+      <div class="contact-method">
+        <div class="cm-icon">📍</div>
+        <div class="cm-text">
+          <strong>Lagos, Nigeria</strong>
+          <span>Serving Lagos · Abuja · Diaspora investors worldwide</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fade-in">
+    <div style="background: var(--cream); border-radius: 20px; padding: 36px; border: 1px solid var(--border);">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 8px; color: var(--text-dark);">Book a Free Consultation</h3>
+      <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 28px;">No pressure. Just a honest conversation about your goals.</p>
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Emeka">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Okonkwo">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="emeka@email.com">
+        </div>
+        <div class="form-group">
+          <label>Phone / WhatsApp</label>
+          <input type="tel" placeholder="+234 800 000 0000">
+        </div>
+        <div class="form-group">
+          <label>I'm Interested In</label>
+          <select>
+            <option>Select a property type...</option>
+            <option>Residential Property</option>
+            <option>Commercial Property</option>
+            <option>Agricultural / Farmland</option>
+            <option>General Investment Advice</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tell Dan about your goals</label>
+          <textarea placeholder="e.g. I'm looking to invest ₦10M in a property that generates passive rental income in Lagos..."></textarea>
+        </div>
+        <button class="submit-btn">Send Message 🚀</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo"><span>D</span> Property With Dan</a>
+      <p>Helping Nigerians and diaspora investors build lasting passive income through verified real estate and agricultural assets in Lagos, Nigeria.</p>
+      <div class="social-links" style="margin-top:20px;">
+        <a href="https://medium.com/@azumaakang" target="_blank" class="social-link">M</a>
+        <a href="#" class="social-link">in</a>
+        <a href="#" class="social-link">IG</a>
+        <a href="#" class="social-link">f</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><a href="#services">Residential Properties</a></li>
+        <li><a href="#services">Commercial Properties</a></li>
+        <li><a href="#services">Agricultural Assets</a></li>
+        <li><a href="#contact">Investment Consulting</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul class="footer-links">
+        <li><a href="#blog">Investment Blog</a></li>
+        <li><a href="https://medium.com/@azumaakang">Medium Articles</a></li>
+        <li><a href="#about">About Daniel</a></li>
+        <li><a href="#testimonials">Client Reviews</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Investors</h4>
+      <ul class="footer-links">
+        <li><a href="#contact">Diaspora Investors</a></li>
+        <li><a href="#contact">First-Time Buyers</a></li>
+        <li><a href="#contact">Corporate Organizations</a></li>
+        <li><a href="#contact">Book a Consultation</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Property With Dan · Daniel Azuma · Lagos, Nigeria · All rights reserved.</p>
+    <p style="font-size:0.78rem; opacity:0.5;">Real Estate · Passive Income · Lagos Investment</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+<div class="whatsapp-tooltip">Chat with Dan on WhatsApp</div>
+
+<script>
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Form submit
+  document.querySelector('.submit-btn').addEventListener('click', () => {
+    const btn = document.querySelector('.submit-btn');
+    btn.textContent = '✅ Message Sent! Dan will be in touch soon.';
+    btn.style.background = '#2ecc71';
+    setTimeout(() => {
+      btn.textContent = 'Send Message 🚀';
+      btn.style.background = '';
+    }, 4000);
+  });
+</script>
+</body>
+</html>
