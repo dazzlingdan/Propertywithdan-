@@ -1,0 +1,126 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+
+  # ── PROPERTY LISTINGS ──────────────────────────────────────────
+  - name: "listings"
+    label: "🏠 Property Listings"
+    folder: "_listings"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Property Title", name: "title", widget: "string", hint: "e.g. 3-Bedroom Smart Apartment" }
+      - label: "Property Type"
+        name: "type"
+        widget: "select"
+        options:
+          - { label: "🏘️ Residential", value: "Residential" }
+          - { label: "🏢 Commercial", value: "Commercial" }
+          - { label: "🌾 Agricultural / Farmland", value: "Farmland" }
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options:
+          - { label: "✅ Available", value: "Available" }
+          - { label: "🔒 Sold", value: "Sold" }
+          - { label: "⏳ Under Offer", value: "Under Offer" }
+        default: "Available"
+      - { label: "Price (₦)", name: "price", widget: "string", hint: "e.g. ₦85,000,000 or ₦4,500,000 per plot" }
+      - { label: "Location", name: "location", widget: "string", hint: "e.g. Lekki Phase 1, Lagos" }
+      - { label: "Property Description", name: "description", widget: "text", hint: "Describe the property — features, investment potential, nearby landmarks" }
+      - { label: "Property Image", name: "image", widget: "image", required: false }
+      - { label: "Bedrooms", name: "bedrooms", widget: "number", required: false, hint: "Leave blank for commercial/land" }
+      - { label: "Bathrooms", name: "bathrooms", widget: "number", required: false }
+      - { label: "Size (sqm)", name: "size", widget: "string", required: false, hint: "e.g. 180sqm or 500 plots available" }
+      - label: "Investment Highlights"
+        name: "highlights"
+        widget: "list"
+        required: false
+        hint: "Key selling points — add one per line"
+        field: { label: "Highlight", name: "highlight", widget: "string" }
+      - { label: "WhatsApp Inquiry Link", name: "whatsapp", widget: "string", required: false, hint: "Pre-filled WhatsApp link for this property" }
+      - { label: "Featured Listing?", name: "featured", widget: "boolean", default: false, hint: "Show this property prominently on the homepage" }
+      - { label: "Date Added", name: "date", widget: "datetime" }
+
+  # ── BLOG POSTS ─────────────────────────────────────────────────
+  - name: "blog"
+    label: "✍️ Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Post Title", name: "title", widget: "string", hint: "e.g. Why Lagos Real Estate Still Pays Off in 2025" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Investment Strategy"
+          - "Diaspora Guide"
+          - "Agricultural Assets"
+          - "Market Update"
+          - "First-Time Buyers"
+          - "Passive Income Tips"
+      - { label: "Cover Image", name: "cover_image", widget: "image", required: false }
+      - { label: "Short Summary", name: "summary", widget: "text", hint: "1-2 sentences shown on the blog listing page" }
+      - { label: "Post Body", name: "body", widget: "markdown", hint: "Write your full article here" }
+      - { label: "Author", name: "author", widget: "string", default: "Daniel Azuma" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Published?", name: "published", widget: "boolean", default: true }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+        hint: "e.g. Lagos real estate, passive income, diaspora investment"
+        field: { label: "Tag", name: "tag", widget: "string" }
+
+  # ── TESTIMONIALS ───────────────────────────────────────────────
+  - name: "testimonials"
+    label: "💬 Client Testimonials"
+    folder: "_testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Client Name", name: "name", widget: "string", hint: "e.g. Chukwuemeka O." }
+      - { label: "Location / Title", name: "location", widget: "string", hint: "e.g. Diaspora Investor · UK or Business Owner · Lagos" }
+      - { label: "Testimonial", name: "review", widget: "text", hint: "What did the client say about working with Daniel?" }
+      - label: "Star Rating"
+        name: "rating"
+        widget: "select"
+        options:
+          - { label: "⭐⭐⭐⭐⭐ 5 Stars", value: 5 }
+          - { label: "⭐⭐⭐⭐ 4 Stars", value: 4 }
+          - { label: "⭐⭐⭐ 3 Stars", value: 3 }
+        default: 5
+      - label: "Property Type Purchased"
+        name: "property_type"
+        widget: "select"
+        required: false
+        options:
+          - "Residential"
+          - "Commercial"
+          - "Farmland"
+          - "General Consulting"
+      - { label: "Display on Homepage?", name: "featured", widget: "boolean", default: true }
+      - { label: "Date", name: "date", widget: "datetime" }
+
+  # ── SITE SETTINGS ──────────────────────────────────────────────
+  - name: "settings"
+    label: "⚙️ Site Settings"
+    files:
+      - label: "Contact & Business Info"
+        name: "contact"
+        file: "_data/contact.yml"
+        fields:
+          - { label: "WhatsApp Number", name: "whatsapp", widget: "string", hint: "Include country code e.g. 2348012345678" }
+          - { label: "Email Address", name: "email", widget: "string" }
+          - { label: "Instagram Handle", name: "instagram", widget: "string", required: false, hint: "Without the @ symbol" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+          - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+          - { label: "Medium Profile URL", name: "medium", widget: "string", required: false }
+          - { label: "Office Address", name: "address", widget: "string", required: false }
+          - { label: "Tagline / Hero Subtitle", name: "tagline", widget: "string", hint: "Short line shown under the hero heading on homepage" }
