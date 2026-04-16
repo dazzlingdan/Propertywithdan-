@@ -6,7 +6,7 @@
 <title>Property With Dan | Lagos Real Estate & Investment Consultant</title>
 <meta name="description" content="Daniel Azuma is a Lagos-based real estate consultant helping Nigerians, diaspora investors, and corporate organizations build passive income through verified investment properties, residential homes, commercial assets, and agricultural land.">
 <meta name="keywords" content="Lagos real estate, investment property Lagos, passive income real estate Nigeria, diaspora property investment, farmland investment Nigeria, Daniel Azuma, property consultant Lagos">
-
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <!-- Schema.org JSON-LD for GEO/AI citability -->
 <script type="application/ld+json">
 {
@@ -1284,5 +1284,16 @@
     }, 4000);
   });
 </script>
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+  </script>
 </body>
 </html>
